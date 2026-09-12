@@ -272,13 +272,19 @@ không build thêm solution; chỉ duy trì rule và calendar hiện có.
 ### 2.3. Card muốn pitch nhất
 **Card tôi muốn pitch nhất:** Card #2 — Cụ thể hóa feedback của GVHD.
 
-**Vì sao:** Vấn đề có thể ảnh hưởng trực tiếp đến tiến độ khóa luận, nhưng card hiện chưa coi “feedback tổng quát” là nguyên nhân đã được chứng minh. Tôi muốn pitch bài này để nhóm challenge giả thuyết bottleneck và thiết kế phép đo trên 3–5 buổi review thật. Pilot nhỏ nhất là template và bước xác nhận cuối buổi, không phải một giải pháp AI.
+**Vì sao:** Trong ba candidate, Card #2 liên quan trực tiếp nhất đến chất lượng và tiến độ khóa luận: nếu một feedback không được chuyển thành task rõ ràng, tôi có thể dành cả tuần làm một kết quả chưa đúng kỳ vọng. Tuy nhiên, tôi chưa kết luận nguyên nhân là GVHD thiếu chuyên môn sâu hoặc feedback quá tổng quát; nguyên nhân cũng có thể chỉ là quy trình review chưa có cấu trúc và tôi chưa xác nhận lại cách hiểu. Tôi muốn pitch card này để nhóm giúp kiểm tra workflow bằng dữ liệu của 3–5 buổi review, xác định bottleneck thật và đánh giá liệu template + xác nhận cuối buổi đã giải quyết đủ hay chưa. Đây là candidate để validation, chưa phải đề xuất xây một giải pháp AI.
 
-**Câu hỏi tôi muốn nhóm challenge:** Trong log 3–5 buổi review, bước nào thực sự gây nhiều thời gian hoặc làm lại nhất: xác định phần cần sửa, hiểu lý do chưa đạt, đặt acceptance criteria hay research kỹ thuật? Nếu template và xác nhận cuối buổi giải quyết 80–90% trường hợp, nhóm có đồng ý kết luận đây là process fix và chưa cần AI không?
+**Câu hỏi tôi muốn nhóm challenge:**
+1. Trong 3–5 buổi review thật, pain lớn nhất nằm ở đâu: xác định phần cần sửa, hiểu lý do chưa đạt, đặt acceptance criteria hay research kiến thức kỹ thuật?
+2. Dấu hiệu nào chứng minh tôi đã “hiểu sai”: GVHD yêu cầu đổi hướng, task bị làm lại, hay chỉ là cần chỉnh thêm như một vòng review bình thường?
+3. Nếu template `Feedback nguyên văn → Phần cần sửa → Vấn đề → Evidence → Expected output → Acceptance criteria → Deadline` và 1–2 phút xác nhận cuối buổi giải quyết được 80–90% trường hợp, nhóm có đồng ý dừng ở process fix/Rule và chưa dùng AI không?
+4. Sau pilot, điều kiện tối thiểu nào chứng minh AI có thêm giá trị: task đã rõ nhưng thời gian research vẫn chiếm phần lớn workflow, hay còn một bottleneck ngôn ngữ cụ thể khác?
 
 **AI phản biện Card:**
-- Điểm yếu AI chỉ ra: Actor trước đây quá rộng; workflow và baseline chưa có bằng chứng; bottleneck gộp ba vấn đề; metric chưa có định nghĩa vận hành; card giả định feedback tổng quát là nguyên nhân thay vì quy trình review thiếu cấu trúc.
-- Tôi sửa gì: Thu hẹp actor và dependency, ghi workflow là giả thuyết, chọn một bottleneck cần kiểm chứng, định nghĩa task hợp lệ/hiểu sai và hạ từ Workflow xuống Rule/process fix. AI là phương án `Not Yet`, chỉ được cân nhắc nếu pilot template vẫn để lại bottleneck research đáng kể.
+- Điểm yếu AI chỉ ra: Actor ban đầu quá rộng; workflow và baseline chưa có bằng chứng; bottleneck gộp nhiều nguyên nhân; metric “task hợp lệ” và “hiểu sai” chưa được định nghĩa; card quy nguyên nhân cho chất lượng feedback trước khi kiểm tra quy trình review. Ngoài ra, AI có thể làm tăng rủi ro bằng cách diễn giải sai ý GVHD nhưng tạo cảm giác câu trả lời có vẻ hợp lý.
+- Tôi sửa gì: Thu hẹp actor thành trường hợp của chính tôi và xác định GVHD là dependency; ghi workflow là giả thuyết cần log trong 3–5 buổi; chọn một bottleneck để kiểm chứng; định nghĩa task hợp lệ và cách ghi nhận hiểu sai. Tôi hạ phương án hiện tại xuống process fix/Rule. AI ở trạng thái `Not Yet`, không tự research, tạo task hay chọn hướng sửa; chỉ được thử ở một bước cụ thể nếu dữ liệu sau pilot chứng minh process fix chưa đủ.
+
+**Kill-test cho Card #2:** Nếu sau 3–5 buổi dùng template và xác nhận cuối buổi, ít nhất 90% feedback trở thành task hợp lệ trong 24 giờ và không còn trường hợp phải đổi hướng do hiểu sai, thì problem đã được giải đủ bằng process fix; không cần xây Workflow AI.
 
 ### Self-check nộp phần 01
 - [x] Có 10 problems + top 3 Cards đủ field
