@@ -48,13 +48,14 @@
 | C — Lịch học, lịch họp và coordination | #4 Lịch khóa học thay đổi sát giờ; #10 Xếp lịch/phòng cross-team meeting; #15 Xếp lịch review với GVHD | Phối hợp availability, constraint, thông báo và reschedule giữa nhiều bên | #10 và #15 gần nhau về scheduling; #4 thiên về change communication hơn là tìm slot. Shared calendar/rule có thể đủ; cần baseline và quyền tích hợp thật. |
 | D — Dạy học, thí nghiệm và phát triển ý tưởng | #3 Soạn bài nâng cao cho học sinh lớp 4/6; #6 Nghẽn ý tưởng scan problem; #8 Gom kết quả train | Tạo hoặc tổ chức đầu ra chuyên môn từ yêu cầu/dữ liệu đầu vào | Đây là cụm tạm có độ liên kết thấp. #3 cần kiểm soát chất lượng nội dung, #6 có tính một lần, #8 nhiều khả năng là logging/script; nên đánh giá riêng khi shortlist. |
 
-### 3.3. Shortlist (giữ 2-3 bài trả lời được 7 câu hỏi worksheet)
+### 3.3. Shortlist (giữ 4 bài để tiếp tục so sánh)
 
 | Candidate | Vì sao vào shortlist (2-3 ý) | Rủi ro / điều chưa rõ |
 |---|---|---|
-| | | |
-| | | |
-| | | |
+| **#2 — Lọc yêu cầu bài tập từ các đoạn chat Zalo** | Tần suất cao, khoảng 3–4 yêu cầu/buổi × 5 buổi/tuần; actor và workflow tương đối rõ: nhận tin nhắn → đọc/lọc → chuyển thành việc cần làm; bài toán có thể so sánh Rule, Workflow và AI trích xuất văn bản. | Chưa có mẫu chat thật để biết format biến thiên đến mức nào; quyền truy cập Zalo và quyền riêng tư có thể khiến việc tự động lấy dữ liệu không khả thi; cần đo số yêu cầu bị sót và thời gian lọc hiện tại. |
+| **#5 — Đọc khối lượng tài liệu lớn để hiểu yêu cầu trước khi làm lab** | Có pain phù hợp với bối cảnh khóa học và có thể ảnh hưởng nhiều học viên, đặc biệt người non-tech; có thể đo thời gian đọc, số thuật ngữ phải tra cứu và số lần hiểu sai yêu cầu; cho phép so sánh tài liệu có cấu trúc/checklist với AI tóm tắt hoặc giải thích. | Actor còn rộng và chưa có số người xác nhận; chưa biết bottleneck chính là khối lượng tài liệu, thuật ngữ chuyên ngành hay thời gian trên lớp; cần xác định loại tài liệu và một output cụ thể thay vì giải quyết “đọc hiểu” nói chung. |
+| **#9 — Tìm lại câu trả lời cũ trong chat nhóm** | Có khả năng nhiều thành viên cùng gặp, workflow ngắn và dễ quan sát: nhớ câu hỏi → search từ khóa → đọc thread → xác nhận đúng ngữ cảnh; có thể đo thời gian tìm, tỷ lệ không tìm thấy và số câu hỏi bị hỏi lại; so sánh được FAQ/index, search và AI retrieval. | Chưa có baseline tần suất và số người bị ảnh hưởng; data access, quyền riêng tư và phạm vi lịch sử chat là dependency lớn; câu trả lời cũ có thể đã hết hạn hoặc thiếu ngữ cảnh, cần người xác nhận trước khi tái sử dụng. |
+| **#11 — Hệ thống hóa tài liệu kỹ thuật thu thập từ nhiều nguồn** | Xảy ra khoảng 2–3 lần/tuần và có nhu cầu lặp lại; liên quan cùng pattern tìm kiếm nhưng mở rộng sang phân loại, gắn ngữ cảnh và truy xuất lại; có thể so sánh taxonomy/template, rule gắn tag, workflow ingestion và AI hỗ trợ phân loại/tóm tắt. | Problem hiện còn rộng: chưa rõ actor, loại tài liệu, nguồn nào và output mong muốn; chưa xác định bottleneck là lưu, phân loại hay tìm lại; cần thu hẹp thành một workflow 3–7 bước và đo thời gian/tỷ lệ tìm lại trước khi chấm điểm. |
 
 ### 3.4. Score để đồng thuận (chấm 1-5, ép nói rõ vì sao cho 5 / cho 3)
 
