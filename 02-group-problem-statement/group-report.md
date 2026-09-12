@@ -14,7 +14,7 @@
 
 **Candidate problem nhóm chọn (1 câu):**
 
-
+Người thu thập tài liệu kỹ thuật từ nhiều nguồn chưa có quy trình thống nhất để phân loại, gắn ngữ cảnh và tìm lại đúng tài liệu khi cần sử dụng.
 ---
 
 ## Phase 3 — Group Convergence: từ 15 candidates về 1
@@ -61,32 +61,51 @@
 
 | Candidate | Actor rõ | Workflow rõ | Pain có evidence | Impact đo được | Làm trong lab | So sánh R/W/A được | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| **#2 — Lọc yêu cầu bài tập từ chat Zalo** | 4 | 5 | 4 | 4 | 3 | 4 | 4 | **28** |
+| **#5 — Đọc tài liệu để hiểu yêu cầu làm lab** | 3 | 3 | 3 | 3 | 5 | 4 | 5 | **26** |
+| **#9 — Tìm câu trả lời cũ trong chat nhóm** | 4 | 5 | 3 | 4 | 3 | 5 | 4 | **28** |
+| **#11 — Hệ thống hóa tài liệu kỹ thuật từ nhiều nguồn** | 3 | 4 | 4 | 4 | 5 | 5 | 5 | **30** |
 
 **Candidate nhóm chọn (1 bài duy nhất):**
 
 ```text
-
+#11 — Hệ thống hóa tài liệu kỹ thuật thu thập từ nhiều nguồn.
 ```
 
 **Vì sao chọn (4-5 câu):**
 
 ```text
-
+#11 đạt 30/35 điểm, cao nhất trong bốn candidate shortlist. Nhóm đều quen với việc thu
+thập tài liệu kỹ thuật từ nhiều nguồn nên hiểu domain và có thể dùng mẫu dữ liệu thật
+để mô tả workflow trong phạm vi lab. Candidate này cho phép so sánh rõ No AI, taxonomy
+hoặc rule gắn tag, workflow nhập liệu và AI hỗ trợ phân loại/tóm tắt; vì vậy nhóm không
+bị buộc phải chọn Agent. Tuy nhiên, đây mới là candidate để pitch và deep-dive: nhóm
+phải thu hẹp actor, loại tài liệu, nguồn, output và bottleneck trước khi viết Problem Statement.
 ```
 
 **Vì sao KHÔNG chọn các candidate còn lại (mỗi bài 2-3 câu):**
 
 ```text
+#2 — Lọc yêu cầu từ chat Zalo: tần suất và workflow rõ, nhưng quyền truy cập dữ liệu,
+quyền riêng tư và sự khác nhau trong cách giáo viên nhắn có thể khiến pilot trong lab
+phải dùng dữ liệu giả lập. Nhóm giữ đây là phương án dự phòng nếu #11 không thu hẹp được.
 
+#5 — Đọc tài liệu để hiểu yêu cầu làm lab: nhóm hiểu bối cảnh và có thể thử nhanh,
+nhưng actor, bottleneck và output hiện còn rộng; “đọc hiểu tốt hơn” khó đo hơn việc lưu,
+phân loại và tìm lại một tài liệu cụ thể.
+
+#9 — Tìm câu trả lời cũ trong chat nhóm: workflow ngắn và retrieval metric khá rõ,
+nhưng data access, quyền riêng tư và câu trả lời hết hạn tạo rủi ro tương tự #2. Candidate
+này cũng thu hẹp vào chat, trong khi #11 cho phép nhóm kiểm tra pattern trên nguồn mà
+nhóm có quyền sử dụng trước.
 ```
 
 **Disagreement (nếu có — ai lo gì, chốt ra sao):**
 
 ```text
-
+Chưa có dữ liệu về disagreement giữa các thành viên. Nhóm tạm chốt #11 theo ma trận
+điểm; nếu có ý kiến khác, cần ghi tên người nêu, lo ngại cụ thể và cách nhóm xử lý trước
+khi nộp bản cuối.
 ```
 
 ---
