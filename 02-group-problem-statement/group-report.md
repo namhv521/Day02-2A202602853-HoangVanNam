@@ -114,32 +114,44 @@ khi nộp bản cuối.
 
 ### 4.1. Quick validation (ít nhất 1 cách: interview 2-3 người hoặc survey 5-10 người)
 
+> **CẢNH BÁO:** Ba mẫu dưới đây là **dữ liệu giả lập để minh họa cách trình bày**, không phải phỏng vấn thật và không được dùng làm bằng chứng khi nộp. Nhóm cần thay bằng câu trả lời và quote nguyên văn của ba người thật.
+
 | Nguồn | Số người / mẫu | Tín hiệu xác nhận (kèm quote nguyên văn) | Tín hiệu phản bác | Nhóm sửa problem thế nào |
 |---|---:|---|---|---|
-| Interview | | | | |
-| Survey / poll | | | | |
-| Log / ticket / review (nếu có) | | | | |
+| Phỏng vấn giả lập — Sinh viên năm 4 CNTT làm khóa luận | 1 | Quote minh họa: “Tôi nhớ đã đọc cách đánh giá mô hình trong một paper hoặc notebook cũ, nhưng thường mất 25–35 phút để tìm đúng đoạn và kiểm tra lại ngữ cảnh.” Persona ước tính gặp khoảng 2 lần/tuần; pain tập trung ở bước tìm đúng đoạn trong Drive, GitHub và bookmark. | Paper quan trọng đã được xếp theo thư mục nên đôi khi tìm trong dưới 5 phút; không phải mọi tài liệu đều cần đưa vào knowledge base. | Thu hẹp pilot vào paper, notebook và bookmark do người dùng chủ động chọn; đo cả trường hợp folder/keyword search hiện tại đã tìm nhanh để tránh phóng đại lợi ích RAG. |
+| Phỏng vấn giả lập — Lập trình viên backend 1–2 năm kinh nghiệm | 1 | Quote minh họa: “Search từ khóa trả quá nhiều kết quả. Tôi tìm được đoạn chat cũ nhưng vẫn phải mở documentation chính thức để xem thông tin còn đúng không.” Persona ước tính gặp 3 lần/tuần, mất khoảng 15–25 phút/lần. | Pain không chỉ đến từ thiếu index mà còn do tài liệu hết hạn; AI tổng hợp không có ngày cập nhật và nguồn có thể làm tăng rủi ro áp dụng sai. | Bổ sung metadata `source`, `captured_at` và `updated_at` nếu có; bắt buộc citation mở được và human review trước khi áp dụng; không tự index toàn bộ chat riêng tư. |
+| Phỏng vấn giả lập — Học viên AI làm việc toàn thời gian | 1 | Quote minh họa: “Tôi lưu link ở nhiều nơi nhưng ít ghi vì sao nó hữu ích. Khi làm lab, tôi phải đọc lại gần như từ đầu để biết phần nào liên quan.” Persona ước tính gặp 2–3 lần/tuần, mất khoảng 30–40 phút/lần. | Nguyên nhân một phần là không duy trì thói quen ghi chú; một kho Notion/Markdown và template đơn giản có thể giải quyết phần lớn pain mà chưa cần AI. | Pilot process fix trước với `topic`, `use case`, `source URL`, ngày và summary ngắn. Chỉ thử semantic retrieval nếu sau khi chuẩn hóa, ít nhất 20% lượt tìm vẫn mất trên 10 phút. |
 
 **Insight sau validation (1-2 câu — pain thật nằm ở đâu):**
 
 ```text
-
+Dữ liệu minh họa gợi ý ba failure mode cần kiểm chứng riêng: không tìm thấy đúng đoạn,
+tìm thấy nhưng thiếu/hết hạn ngữ cảnh, và không nhớ vì sao tài liệu đã được lưu. Vì đây
+chưa phải dữ liệu thật, nhóm chưa được dùng các con số trên làm baseline; cần phỏng vấn
+3 người thật và ghi nhật ký 5–10 lượt tra cứu trước khi chốt Problem Statement.
 ```
 
 Bằng chứng đính kèm (nếu có): `02-group-problem-statement-survey.png`, `...-interview-notes.md`
+
+**Trạng thái validation:** `Chưa hoàn thành — nội dung hiện tại là dữ liệu giả lập, cần thay bằng 3 phỏng vấn thật.`
 
 ### 4.2. Research giải pháp đã có (ít nhất 2-3 tools/patterns + 1-2 link kiểm được)
 
 | Nguồn / tool / case | Link | Họ giải quyết bước nào? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| Google NotebookLM | https://notebooklm.google.com/ | Giải quyết phần index/retrieval/review: tổ chức tập nguồn do người dùng cung cấp, tổng hợp, hỏi đáp và dẫn người dùng trở lại nguồn qua citation. | Pattern source-grounded giúp câu trả lời bám vào tài liệu đã chọn, hỗ trợ tóm tắt và Q&A, đồng thời giảm rủi ro người dùng tin một câu trả lời không có nguồn đối chiếu. | Capture chưa hoàn toàn tự động: người dùng vẫn phải chọn, thêm và quản lý nguồn. Nhóm chưa xác minh được giới hạn `50–100 nguồn` từ link chính thức nên không dùng con số này làm căn cứ thiết kế. | RAG phải luôn trả citation/link tới đoạn hoặc tài liệu gốc để người dùng kiểm tra trước khi áp dụng. |
+| Notion AI | https://www.notion.so/product/ai | Giải quyết khâu tổ chức knowledge có cấu trúc, tạo summary/thuộc tính và tìm kiếm trên workspace cùng các ứng dụng được kết nối. | Tích hợp trong docs/database hằng ngày; trang chính thức nêu Enterprise Search trên các nguồn kết nối như Slack, Google Drive và GitHub, cùng khả năng hiển thị nguồn trong AI citations. | Garbage in, garbage out: note sơ sài hoặc thiếu metadata vẫn cho kết quả kém. Connected apps, Enterprise Search và mức sử dụng AI phụ thuộc plan/quyền truy cập; không mặc định truy cập được Discord, email hoặc bookmark cá nhân. | Cần chuẩn hóa ngay khi ingestion bằng template tối thiểu: topic, source URL, ngày, use case, summary và tag đã được người dùng duyệt. |
+| Onyx — Open Source AI Platform | https://github.com/onyx-dot-app/onyx | Giải quyết connector ingestion, đồng bộ knowledge và search/RAG tập trung bằng vector + keyword index. | Open source, có thể self-host; bản Standard có connector-sync workers, RAG index và hỗ trợ nhiều LLM. Pattern hybrid retrieval phù hợp khi tài liệu nằm ở nhiều hệ thống. | Full deployment cần nhiều thành phần như worker, indexing/inference, Redis và MinIO; cấu hình connector phụ thuộc API key và permission. Bản Lite nhẹ hơn nhưng không có RAG index và connector-sync workers của Standard, nên giải pháp đầy đủ quá nặng cho pilot cá nhân. | Không tự xây lại Enterprise Search. Chỉ học pattern connector/webhook → kho trung gian → hybrid retrieval, và bắt đầu với một tập nguồn nhỏ được phép sử dụng. |
 
 **Research takeaway (2-3 câu — nên build gì / không build gì):**
 
 ```text
-
+Không nên tự viết lại giao diện ghi chú, hệ thống chat hoặc dựng hạ tầng Enterprise
+Search như Onyx vì quá cồng kềnh cho nhu cầu của một cá nhân. Nếu validation thật cho
+thấy template Notion/Markdown và keyword search chưa đủ, nhóm nên pilot Workflow RAG
+tinh gọn: 1-click capture tài liệu được phép → AI đề xuất summary/tag → người dùng duyệt
+→ index → semantic search trả kết quả kèm citation theo pattern NotebookLM. Không tự đọc
+toàn bộ Discord/Teams/email và không dùng Agent tự chọn nguồn hoặc áp dụng kiến thức.
 ```
 
 > Lưu ý: không dùng số liệu AI đưa nếu không verify được link chính thức. Ghi rõ giả định chưa chắc.
