@@ -9,7 +9,7 @@
 | 1 | Nguyễn Hải Hoàng | 2A202602489 | Chưa phân công |
 | 2 | Phan Danh Đạt | 2A202602627 | Chưa phân công |
 | 3 | Lê Tuấn Đạt | 2A202602623 | Chưa phân công |
-| 4 | Nguyễn Danh Gia Mình | 2A202602441 | Chưa phân công |
+| 4 | Nguyễn Danh Gia Minh | 2A202602441 | Chưa phân công |
 | 5 | Hoàng Văn Nam | 2A202602853 | Chưa phân công |
 
 **Candidate problem nhóm chọn (1 câu):**
@@ -394,8 +394,8 @@ như một process fix độc lập với AI.
 ---
 
 ### Self-check nộp phần 02 (nhóm)
-- [ ] Có nhật ký hội tụ 9-12 → 1 (cluster + shortlist + score)
-- [ ] Có validation (quote thật) + research (link kiểm được)
-- [ ] Có workflow trước/sau đủ thời gian, handoff, bottleneck, boundary, fallback
-- [ ] Có PS v0 → v1, metric có trước/sau + cách đo, boundary có làm/không làm
-- [ ] Có so sánh Rule/Workflow/Agent + Decision Go/Not Yet/No-Go có lý do
+- [x] Có nhật ký hội tụ 9-12 → 1 (cluster + shortlist + score)
+- [x] Có validation (quote thật) + research (link kiểm được)
+- [x] Có workflow trước/sau đủ thời gian, handoff, bottleneck, boundary, fallback
+- [x] Có PS v0 → v1, metric có trước/sau + cách đo, boundary có làm/không làm
+- [x] Có so sánh Rule/Workflow/Agent + Decision Go/Not Yet/No-Go có lý do
