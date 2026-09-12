@@ -235,113 +235,148 @@ liệu vào knowledge base sau khi kiểm tra.
 
 ### 6.0. Ma trận độ phù hợp (suy nghĩ nhanh, không thay quyết định cuối)
 
-- Độ mơ hồ: [ ] Thấp (có đúng/sai rõ) / [ ] Cao (nhiều cách trả lời vẫn OK) — Vì sao:
-- Độ phức tạp: [ ] Thấp (1-2 bước) / [ ] Cao (3+ bước/nguồn, phụ thuộc nhau) — Vì sao:
+- Độ mơ hồ: [ ] Thấp (có đúng/sai rõ) / [x] Cao (nhiều cách trả lời vẫn OK) — Vì sao: một tài liệu có thể được tóm tắt hoặc gắn nhiều tag hợp lý; cùng một chủ đề cũng có thể được diễn đạt bằng các thuật ngữ khác nhau, nên không có một cách phân loại hoặc một câu trả lời duy nhất.
+- Độ phức tạp: [ ] Thấp (1-2 bước) / [x] Cao (3+ bước/nguồn, phụ thuộc nhau) — Vì sao: current workflow có 6 bước và tài liệu nằm ở note, file, Discord, Teams, email; bước đối chiếu/đọc lại phụ thuộc kết quả của bước tìm kiếm.
 
 **Bài toán nhóm nằm ở ô nào:**
 
 ```text
-
+Mơ hồ cao + phức tạp cao. Theo ma trận, Agent có thể được cân nhắc, nhưng nhóm vẫn hạ
+xuống Workflow vì AI không cần tự lập kế hoạch, tự chọn mục tiêu hoặc tự quyết định bước
+tiếp theo; boundary, người review và fallback đều được xác định rõ.
 ```
 
 **Vì sao (2-3 câu):**
 
 ```text
-
+Bài toán có nhiều nguồn nhưng đường đi của query vẫn tuyến tính: người đặt câu hỏi → RAG
+tìm trong kho → trả đoạn kèm citation → người mở nguồn → áp dụng. Phần mơ hồ tập trung
+ở bước semantic retrieval/tóm tắt; đây là điểm can thiệp AI cụ thể, còn người dùng vẫn
+chọn tài liệu để index và quyết định cách áp dụng nên Workflow đã đủ, Agent là thừa.
 ```
 
 ### 6.1. So sánh Rule / Workflow / Agent (so trên cùng 1 bài)
 
 | Mức | Phương án cho bài toán nhóm | Khi nào đủ | Rủi ro | Chọn? (Dùng cho bước nào?) |
 |---|---|---|---|---|
-| **Rule** | | | | |
-| **Workflow** | | | | |
-| **Agent** | | | | |
+| **Rule** | Một kho lưu tập trung, template metadata và bộ tag/taxonomy cố định; script trích text hoặc tạo index theo quy tắc. | Đủ nếu người dùng duy trì việc lưu, nhớ đúng tag/từ khóa và process fix đã đưa thời gian tìm xuống dưới 10 phút. | Phụ thuộc thói quen; tag đặt lúc lưu có thể không khớp cách hỏi sau này; không xử lý tốt diễn đạt đồng nghĩa. | **Có, nhưng không chọn làm toàn bộ:** dùng cho capture, metadata, quyền truy cập và lưu/index tài liệu. |
+| **Workflow** | Người hỏi bằng ngôn ngữ tự nhiên → RAG semantic retrieval → trả đoạn/tóm tắt kèm citation → người mở nguồn, review và áp dụng. | Đủ vì luồng query tuyến tính, AI chỉ hỗ trợ một bước ngôn ngữ và người kiểm tra ngay ở bước sau. | Trả nhầm tài liệu, citation lỗi, tóm tắt lệch bản gốc hoặc dùng nguồn outdated. | **Chọn:** dùng AI ở bước tìm/tổng hợp; Rule ở ingestion; người review và áp dụng. |
+| **Agent** | Tự theo dõi nhiều nguồn, tự quyết định tài liệu cần lưu, tự tag, tự tìm thêm và tự cập nhật kho. | Chỉ cần nếu hệ thống phải tự lập kế hoạch nhiều vòng, gọi nhiều tool và xử lý ngoại lệ mà không chờ người dùng. | Có thể thu thập dữ liệu không được phép, loại nhầm tài liệu, thay đổi kho ngoài ý muốn; cần quyền vào nhiều hệ thống cá nhân và khó rollback. | **Không chọn:** không cần tự chủ hoặc dynamic planning trong pilot. |
 
 **5 câu hỏi chốt (trả lời câu đầy đủ):**
-1. Rule có giải được 70-80% case không?
-2. Các bước có đi thẳng một đường không hay phải rẽ nhánh?
-3. Có thật sự cần Agent tự lập kế hoạch + gọi tool không?
-4. Nếu AI sai, ai phát hiện đầu tiên và sửa trong bao lâu?
-5. Có hạ được từ Agent → Workflow → Rule không?
+1. Rule có giải được 70-80% case không? **Chưa biết.** Nhóm giả thuyết Rule giải quyết tốt bước lưu/index nhưng có thể chỉ giải quyết khoảng 50% pain tìm kiếm khi tag cũ không khớp cách hỏi mới; cần pilot template và keyword search để đo thay vì coi 50% là bằng chứng thật.
+2. Các bước có đi thẳng một đường không hay phải rẽ nhánh? **Đường chính đi thẳng.** Người đặt câu hỏi → hệ thống tìm → người mở nguồn → áp dụng; nhánh fallback chỉ xảy ra khi không đủ nguồn/citation lỗi và do người quyết định quay về tra cứu thủ công.
+3. Có thật sự cần Agent tự lập kế hoạch + gọi tool không? **Không.** Người dùng chọn tài liệu và đặt câu hỏi; AI chỉ tìm/tổng hợp trong kho đã được cho phép và không cần tự quyết bước kế tiếp.
+4. Nếu AI sai, ai phát hiện đầu tiên và sửa trong bao lâu? **Nguyễn Danh Gia Mình** phát hiện ở bước review vì bắt buộc mở citation trước khi áp dụng. Mục tiêu phát hiện trong bước review 4 phút; nếu sai thì bỏ câu trả lời và quay về tìm thủ công, chưa khẳng định chỉ mất thêm 1 phút khi chưa đo.
+5. Có hạ được từ Agent → Workflow → Rule không? **Hạ xuống Workflow được và nhóm đã hạ.** Hạ tiếp xuống Rule có thể đủ nếu single source of truth + template/tag + keyword search đạt metric dưới 10 phút; đây là kill-test phải chạy trước pilot AI.
 
 **Mức chọn:**
 
 ```text
-[Rule / Workflow / Agent]
+Workflow
 ```
 
 **Vì sao chọn (3-4 câu):**
 
 ```text
-
+Bottleneck là tìm lại nội dung khi cách diễn đạt câu hỏi hiện tại khác metadata/từ khóa
+đã lưu; semantic retrieval phù hợp hơn rule từ khóa ở đúng bước này. Các bước còn lại
+được giữ deterministic hoặc do người thực hiện. Boundary rõ: AI chỉ trả đoạn/tóm tắt
+kèm citation, Nguyễn Danh Gia Mình bắt buộc mở nguồn và tự quyết định trước khi áp dụng.
 ```
 
 **Vì sao không chọn mức đơn giản hơn (2-3 câu):**
 
 ```text
-
+Rule vẫn được giữ cho capture, metadata, quyền truy cập và index vì kho có cấu trúc là
+điều kiện cần. Tuy nhiên, nhóm chưa chọn Rule làm toàn bộ giải pháp do giả thuyết rằng
+tag/từ khóa đặt lúc lưu không bao phủ được các cách diễn đạt mới; giả thuyết này phải
+được kiểm chứng bằng pilot keyword search trước khi kết luận Workflow AI cần thiết.
 ```
 
 ### 6.2. Problem Statement v1 (v0 sửa chặt hơn + 3 field cuối)
 
 | Field | Nội dung |
 |---|---|
-| **Actor** | |
-| **Workflow** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** | |
-| **Boundary** (làm / không làm) | |
-| **AI intervention point** (can thiệp sau bước nào, trước bước nào) | |
-| **Mức chọn** (Rule / Workflow / Agent + 1 câu vì sao) | |
-| **Rủi ro & người thật kiểm tra** (rủi ro lớn nhất + ai kiểm tra bằng cách nào) | |
+| **Actor** | Nguyễn Danh Gia Mình — người trực tiếp thu thập và tái sử dụng tài liệu kỹ thuật cho học tập, nghiên cứu và xử lý task. Đây là actor của pilot; chưa khái quát cho mọi người tự học hoặc nhân sự kỹ thuật khi chưa có validation thật. |
+| **Workflow** | Khi cần kiến thức cũ, actor xác định chủ đề, nhớ nguồn, tìm trên note/file/Discord/Teams/email, đối chiếu phần rời rạc, đọc lại phần thiếu rồi áp dụng nhưng chưa lưu có cấu trúc. Current workflow có 6 bước; future query workflow gồm nhập câu hỏi → RAG trả kết quả/citation → người mở nguồn review → áp dụng. |
+| **Bottleneck** | Bước tìm thủ công trên nhiều nguồn không có metadata, taxonomy, tag và index thống nhất mất khoảng 20 phút/lần là bottleneck giả thuyết. Việc diễn đạt câu hỏi hiện tại khác từ khóa lúc lưu có thể làm keyword search trượt, nhưng cần pilot để chứng minh. |
+| **Impact** | Tổng thời gian hiện được ước tính 42 phút/lần × 2–3 lần/tuần, tương đương 84–126 phút/tuần. Ngoài thời gian, việc chỉ tìm thấy một phần hoặc nguồn đã cũ có thể dẫn tới áp dụng kiến thức thiếu ngữ cảnh; baseline phải được xác nhận bằng 5–10 lượt bấm giờ. |
+| **Success Metric** | Giảm từ baseline tạm 42 phút xuống mục tiêu 7 phút/lần và dưới 10 phút ở ít nhất 80% của 5–10 lượt pilot. Ít nhất 90% câu trả lời có citation mở được; tỷ lệ phải đọc/tìm lại từ đầu dưới 1/5 lượt; số lần áp dụng nội dung không có trong nguồn gốc giữ ở 0. |
+| **Boundary** (làm / không làm) | **Làm:** index tài liệu người dùng chủ động cung cấp, semantic retrieval, trả đoạn/tóm tắt kèm citation và gợi ý metadata/tag. **Không làm:** không tự đọc nguồn chưa cấp quyền, không xóa/sửa tài liệu gốc, không tự kết luận hoặc áp dụng kiến thức vào task. |
+| **AI intervention point** (can thiệp sau bước nào, trước bước nào) | Sau khi người dùng đã chọn tài liệu cho kho và đặt câu hỏi; trước bước Nguyễn Danh Gia Mình mở citation để đọc, xác minh độ chính xác/độ mới và quyết định cách áp dụng. |
+| **Mức chọn** (Rule / Workflow / Agent + 1 câu vì sao) | **Workflow:** đường đi tuyến tính và AI chỉ cần xử lý semantic retrieval/tóm tắt; capture/index dùng Rule, không cần Agent tự lập kế hoạch. |
+| **Rủi ro & người thật kiểm tra** (rủi ro lớn nhất + ai kiểm tra bằng cách nào) | Rủi ro lớn nhất là câu trả lời nghe hợp lý nhưng lệch hoặc không được hỗ trợ bởi nguồn gốc. Nguyễn Danh Gia Mình là owner/reviewer, bắt buộc mở citation, đối chiếu đoạn gốc và độ mới trước khi áp dụng; thiếu nguồn thì fallback sang tra cứu thủ công. |
 
 ### 6.3. Final decision
 
 | Câu hỏi | Yes / Not Yet / No | Ghi chú (câu đầy đủ) |
 |---|---|---|
-| Actor + workflow rõ chưa? | | |
-| Baseline + metric đo được chưa? | | |
-| Data/input đủ dùng chưa? | | |
-| AI sai, hậu quả chấp nhận được không? | | |
-| Có người review/owner không? | | |
-| Có cách non-AI đơn giản hơn không? | | |
+| Actor + workflow rõ chưa? | Yes | Actor pilot là Nguyễn Danh Gia Mình; current workflow có 6 bước và future query workflow có 4 bước với human boundary rõ. |
+| Baseline + metric đo được chưa? | Not Yet | Có cách đo và baseline tạm 42 phút/lần, nhưng đây vẫn là ước tính; cần bấm giờ 5–10 lượt trước pilot để xác nhận. |
+| Data/input đủ dùng chưa? | Not Yet | Tài liệu còn rải ở nhiều nguồn; cần chọn và gom 20–30 tài liệu được phép vào một kho trước khi thử retrieval. |
+| AI sai, hậu quả chấp nhận được không? | Yes, với boundary | Pilot chỉ hỗ trợ tìm kiếm; người dùng bắt buộc mở nguồn trước khi áp dụng. Câu trả lời thiếu nguồn bị bỏ và quay về tra cứu thủ công. |
+| Có người review/owner không? | Yes | Nguyễn Danh Gia Mình vừa là owner của kho vừa là người review citation và chịu trách nhiệm về cách áp dụng. |
+| Có cách non-AI đơn giản hơn không? | Yes, cần thử trước | Single source of truth + template metadata/tag + keyword search có thể đủ; đây là kill-test trước khi dùng semantic retrieval. |
 
 **Decision:**
 
 ```text
-[Go / Not Yet / No-Go]
+Go với scope pilot nhỏ; chưa Go build hệ thống hoàn chỉnh.
 ```
 
 **Lý do (3-4 câu dựa trên bằng chứng):**
 
 ```text
-
+- Actor và workflow đã đủ rõ để thiết kế một phép thử nhỏ, nhưng baseline/data vẫn cần
+  chuẩn bị và đo trước khi chạy.
+- AI chỉ can thiệp ở semantic retrieval; Rule xử lý ingestion/index và người review ngay
+  sau kết quả, nên rủi ro có thể giới hạn trong pilot.
+- Pilot dùng công cụ có sẵn, không xây Agent hay hạ tầng riêng và có kill-test non-AI.
+- Quyết định Go ở đây là Go đo/so sánh Rule với Workflow, không phải bằng chứng rằng RAG
+  chắc chắn tốt hơn process fix.
 ```
 
 **Nếu Go — pilot nhỏ nhất (data nào, chạy tay ra sao, đo 3 số nào):**
 
 ```text
-
+- Data: chọn 20–30 tài liệu kỹ thuật đã đọc trong 2 tháng gần nhất và được phép sử dụng,
+  đưa vào một thư mục/Notion; chọn 5 câu hỏi mà actor biết tài liệu gốc chứa câu trả lời.
+- Chạy tay: đo keyword search trên kho có cấu trúc trước, sau đó dùng một công cụ RAG có
+  sẵn với cùng 5 câu hỏi; luôn mở citation để đối chiếu, không xây hệ thống mới.
+- Đo 3 số:
+  1. Thời gian từ lúc đặt câu hỏi đến khi tìm được nguồn đủ dùng.
+  2. Tỷ lệ trả đúng tài liệu chứa câu trả lời trên 5 câu hỏi.
+  3. Số claim không được hỗ trợ bởi tài liệu gốc hoặc citation không mở được.
 ```
 
 **Nếu Not Yet — cần validate gì trước:**
 
 ```text
-
+Trước khi mở rộng pilot, cần đo 5–10 lượt current workflow để xác nhận baseline 42 phút,
+xác minh tần suất 2–3 lần/tuần và phân loại nguồn nào được phép index. Nếu keyword search
+trên kho đã chuẩn hóa đưa ít nhất 80% lượt xuống dưới 10 phút, dừng ở Rule và không thử AI.
 ```
 
 **Nếu No-Go — làm gì thay AI:**
 
 ```text
-
+Dùng một kho duy nhất với template: topic, câu hỏi tài liệu trả lời, source URL, ngày cập
+nhật, summary và tag. Duy trì bộ taxonomy cố định, keyword search và liên kết tới nguồn
+gốc; không xây RAG nếu process fix này đạt metric.
 ```
 
 **Exit / rollback (khi nào dừng AI, quay về cách cũ):**
 
 ```text
+Dừng pilot AI và quay về Rule/keyword search nếu xảy ra một trong các điều kiện:
+1. RAG trả đúng tài liệu ở dưới 3/5 câu hỏi thử.
+2. Có bất kỳ claim nào không được hỗ trợ bởi bản gốc hoặc citation không mở được; tạm
+   dừng để kiểm tra ingestion/retrieval trước khi cân nhắc chạy lại.
+3. Sau 2 tuần, trung vị thời gian tìm vẫn trên 20 phút hoặc không tốt hơn Rule baseline.
 
+Rollback không làm mất kho đã gom: tài liệu, metadata và keyword search vẫn có giá trị
+như một process fix độc lập với AI.
 ```
 
 ---
