@@ -8,8 +8,8 @@
 |-----|-----------|-------------|---------------------------------------------------------------|
 | 1 | Nguyễn Hải Hoàng | 2A202602489 | Chưa phân công |
 | 2 | Phan Danh Đạt | 2A202602627 | Chưa phân công |
-| 3 | Lê Tuấn Đạt | 02623 | Chưa phân công |
-| 4 | Chưa cung cấp họ tên | 2A202602441 | Chưa phân công |
+| 3 | Lê Tuấn Đạt | 2A202602623 | Chưa phân công |
+| 4 | Nguyễn Danh Gia Mình | 2A202602441 | Chưa phân công |
 | 5 | Hoàng Văn Nam | 2A202602853 | Chưa phân công |
 
 **Candidate problem nhóm chọn (1 câu):**
@@ -32,9 +32,9 @@ Người thu thập tài liệu kỹ thuật từ nhiều nguồn chưa có quy 
 | 7 | Lê Tuấn Đạt | Đọc paper để lấy phần liên quan | Lê Tuấn Đạt/người đang làm nghiên cứu | Dò tìm đoạn liên quan trong paper rồi đọc hiểu để sử dụng | Tốn thời gian và workflow rõ; cần tách thời gian tìm đoạn khỏi thời gian đọc hiểu để xác định đúng bottleneck. |
 | 8 | Lê Tuấn Đạt | Gom kết quả train vào bảng so sánh | Lê Tuấn Đạt/người chạy thí nghiệm mô hình | Chép thủ công metric từ nhiều lần train vào bảng, có nguy cơ nhầm số | Evidence và metric trước/sau dễ đo; có khả năng logging convention hoặc script đã đủ, chưa cần AI. |
 | 9 | Lê Tuấn Đạt | Tìm lại câu trả lời cũ trong chat nhóm | Thành viên nhóm cần tra cứu quyết định/câu trả lời cũ | Search từ khóa rồi đọc nhiều đoạn chat để tìm đúng ngữ cảnh | Nhiều người có thể cùng đau; cần kiểm tra data access, quyền riêng tư và tần suất tìm thực tế. |
-| 10 | Thành viên mã 2A202602441 | Sắp xếp lịch họp và phòng họp cho cross-team meeting | Người điều phối cross-team meeting; các thành viên tham dự | Tìm giao lịch, phòng trống và xử lý vòng đề xuất lại, mất khoảng 15–20 phút/lần | Actor/workflow/impact tương đối rõ; cần biết có calendar/room API thật hay chỉ có thể giả lập. |
-| 11 | Thành viên mã 2A202602441 | Tài liệu kỹ thuật thu thập từ nhiều nguồn nhưng không được hệ thống hóa | Người thu thập và sử dụng tài liệu kỹ thuật | Phân loại, gắn ngữ cảnh và tìm lại tài liệu từ nhiều nguồn, xảy ra khoảng 2–3 lần/tuần | Có tần suất nhưng workflow còn rộng; cần thu hẹp loại tài liệu, nguồn, output và tình huống sử dụng. |
-| 12 | Thành viên mã 2A202602441 | Viết meeting notes sau cross-team meeting | Người phụ trách ghi biên bản; thành viên cần action items/decisions | Biến ghi chú hoặc nội dung cuộc họp thành notes có cấu trúc, mất khoảng 20–30 phút/buổi | Workflow và metric rõ; feasibility phụ thuộc việc có transcript thật hay chỉ có ghi chú tay. |
+| 10 | Nguyễn Danh Gia Mình | Sắp xếp lịch họp và phòng họp cho cross-team meeting | Người điều phối cross-team meeting; các thành viên tham dự | Tìm giao lịch, phòng trống và xử lý vòng đề xuất lại, mất khoảng 15–20 phút/lần | Actor/workflow/impact tương đối rõ; cần biết có calendar/room API thật hay chỉ có thể giả lập. |
+| 11 | Nguyễn Danh Gia Mình | Tài liệu kỹ thuật thu thập từ nhiều nguồn nhưng không được hệ thống hóa | Người thu thập và sử dụng tài liệu kỹ thuật | Phân loại, gắn ngữ cảnh và tìm lại tài liệu từ nhiều nguồn, xảy ra khoảng 2–3 lần/tuần | Có tần suất nhưng workflow còn rộng; cần thu hẹp loại tài liệu, nguồn, output và tình huống sử dụng. |
+| 12 | Nguyễn Danh Gia Mình | Viết meeting notes sau cross-team meeting | Người phụ trách ghi biên bản; thành viên cần action items/decisions | Biến ghi chú hoặc nội dung cuộc họp thành notes có cấu trúc, mất khoảng 20–30 phút/buổi | Workflow và metric rõ; feasibility phụ thuộc việc có transcript thật hay chỉ có ghi chú tay. |
 | 13 | Hoàng Văn Nam | Báo cáo và đồng bộ tiến độ trên GitHub, Drive, DOCX | Hoàng Văn Nam — sinh viên năm 4 vừa đi làm vừa làm khóa luận; GVHD là người review | Nhập/định dạng lại phần nội dung thực sự bị trùng giữa các kênh | Lặp hằng tuần nhưng chưa chứng minh ba nơi đều bắt buộc hoặc chứa cùng nội dung; process fix có thể giải quyết phần lớn. |
 | 14 | Hoàng Văn Nam | Chuyển feedback sau review thành task có thể thực hiện và kiểm tra | Hoàng Văn Nam trong review 1:1 hằng tuần; GVHD xác nhận cách hiểu | Chuyển feedback thành task có vị trí cần sửa và acceptance criteria rõ | Tác động trực tiếp tiến độ khóa luận; cần log 3–5 buổi để kiểm chứng bottleneck, ưu tiên template/process fix trước AI. |
 | 15 | Hoàng Văn Nam | Xếp lịch review hằng tuần với GVHD | Hoàng Văn Nam và GVHD | Lọc availability theo lịch làm/lịch dạy, rule online/offline và buffer rồi xác nhận/reschedule | Workflow ngắn, đo được; fixed weekly slot + mặc định online có thể làm problem biến mất mà không cần build. |
