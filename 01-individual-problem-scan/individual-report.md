@@ -112,15 +112,15 @@ Fallback: Dùng khung giờ cố định; phát sinh khẩn cấp thì xác nh�
 ```
 
 ### 2.3. Card muốn pitch nhất
-**Card tôi muốn pitch nhất:** Card #1 — Báo cáo và đồng bộ tiến độ khóa luận.
+**Card tôi muốn pitch nhất:** Card #2 — Cụ thể hóa feedback của GVHD.
 
-**Vì sao:** Workflow lặp hằng tuần, input/output rõ và đo được bằng thời gian, thao tác nhập trùng, lỗi phiên bản. Có thể chuẩn hóa nguồn/template trước rồi mới kiểm tra AI có giảm công viết tóm tắt hay không.
+**Vì sao:** Đây là vấn đề ảnh hưởng trực tiếp đến chất lượng và tiến độ khóa luận. Sau mỗi buổi review, tôi phải tự diễn giải feedback tổng quát, tìm tài liệu kỹ thuật và quyết định cần sửa gì; nếu hiểu sai, tôi có thể mất cả tuần làm theo hướng chưa phù hợp. Tác động có thể đo bằng thời gian research, số feedback phải hỏi lại và số task bị thay đổi sau lần review tiếp theo.
 
-**Câu hỏi tôi muốn nhóm challenge:** GVHD có thật sự cần ba nơi cập nhật không, hay vấn đề gốc là chưa thống nhất nguồn chính? Nếu template + link giải quyết 70–80%, AI còn đủ giá trị so với rủi ro tóm tắt sai không?
+**Câu hỏi tôi muốn nhóm challenge:** Pain chính có thực sự đến từ việc GVHD chưa có chuyên môn sâu về lĩnh vực của đề tài, hay do tôi chưa chủ động hỏi lại để làm rõ đầu ra và tiêu chí hoàn thành? Nếu một mẫu ghi nhận feedback và bước xác nhận lại với GVHD đã giải quyết phần lớn vấn đề, AI còn nên can thiệp ở bước nào mà không tự diễn giải sai ý của giảng viên?
 
 **AI phản biện Card:**
-- Điểm yếu AI chỉ ra: Chưa có baseline và bằng chứng lỗi phiên bản; đây có thể chủ yếu là vấn đề quy trình.
-- Tôi sửa gì: Tách rule/template khỏi AI draft, đặt human review và kế hoạch đo 4 tuần.
+- Điểm yếu AI chỉ ra: Nhận định feedback “chung chung” còn chủ quan và có thể vô tình quy nguyên nhân cho GVHD; chưa có baseline về thời gian research, số lần hỏi lại hoặc số lần làm sai hướng. AI cũng có nguy cơ diễn giải sai feedback kỹ thuật và làm sinh viên tự tin vào một hướng sửa chưa được xác nhận.
+- Tôi sửa gì: Mô tả vấn đề dựa trên workflow và kết quả quan sát được thay vì đánh giá năng lực của GVHD; ưu tiên template câu hỏi làm rõ và bước GVHD xác nhận task. AI chỉ được gợi ý câu hỏi và từ khóa research, còn sinh viên phải kiểm nguồn và xác nhận hướng sửa với GVHD.
 
 ### Self-check nộp phần 01
 - [x] Có 10 problems + top 3 Cards đủ field
