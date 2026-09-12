@@ -126,6 +126,9 @@ tự viết. Không để AI/Agent tự sửa hoặc publish lên nhiều nguồ
 ```
 
 #### Problem Card #2 — Cụ thể hóa feedback GVHD
+
+![Workflow Card #2 — Cụ thể hóa feedback GVHD](01-individual-problem-scan-workflow-card-2.png)
+
 ```text
 Problem 1 câu: Sau review 1:1 hằng tuần, tôi chưa có quy trình thống nhất để chuyển
 từng feedback thành task chỉ rõ vị trí cần sửa và điều kiện hoàn thành, nên có nguy cơ
