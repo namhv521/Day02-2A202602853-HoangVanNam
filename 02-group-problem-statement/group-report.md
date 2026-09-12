@@ -150,26 +150,37 @@ Bằng chứng đính kèm (nếu có): `02-group-problem-statement-survey.png`,
 
 ### 5.1. Current workflow bản nhóm
 
-Dán workflow hoặc link file: `02-group-problem-statement-workflow.png/pdf/md`
+Dán workflow hoặc link file: `02-group-problem-statement-workflow.png`
+
+![Workflow trước/sau — Hệ thống hóa tài liệu kỹ thuật](02-group-problem-statement-workflow.png)
 
 ```text
-[1 ...: __' - ai làm] → [2 ...: __'] → [3 ...: __'] → [4 ... bottleneck: __'] → ...
+CURRENT STATE — 6 bước, 42 phút/lần (ước tính 2–3 lần/tuần; cần bấm giờ)
+
+[1. Phát sinh nhu cầu: 2' - Nguyễn Danh Gia Mình]
+→ [2. Nhớ nguồn đã từng đọc: 2' - Nguyễn Danh Gia Mình]
+→ [3. Lục note/file/Discord/Teams/email: 20' - Nguyễn Danh Gia Mình]  <-- bottleneck
+→ [4. Đối chiếu và nhận ra thông tin thiếu/rời rạc: 5' - Nguyễn Danh Gia Mình]
+→ [5. Đọc/tìm hiểu lại phần còn thiếu: 10' - Nguyễn Danh Gia Mình]
+→ [6. Áp dụng vào task nhưng chưa lưu có hệ thống: 3' - Nguyễn Danh Gia Mình]
 ```
 
 | Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú (handoff? bottleneck?) |
 |---|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
+| 1 | Nguyễn Danh Gia Mình | Task cần giải quyết | Chủ đề hoặc kiến thức cần dùng lại được xác định | 2 phút; ước tính 2–3 lần/tuần | Điểm bắt đầu workflow khi gặp vướng mắc kỹ thuật. |
+| 2 | Nguyễn Danh Gia Mình | Chủ đề cần tìm | Ký ức sơ bộ về nơi từng đọc | 2 phút/lần | Có thể không nhớ chính xác nguồn hoặc từ khóa. |
+| 3 | Nguyễn Danh Gia Mình | Chủ đề và nguồn nhớ được | Một tập note, file, message hoặc email có khả năng liên quan | 20 phút/lần | **Bottleneck:** tìm thủ công trên nhiều kênh không có taxonomy/tag/index chung. |
+| 4 | Nguyễn Danh Gia Mình | Các đoạn/tài liệu tìm được | Xác định phần thông tin còn thiếu, rời rạc hoặc cần kiểm tra độ mới | 5 phút/lần | Không phải lần nào cũng tìm được một nguồn đầy đủ và đúng ngữ cảnh. |
+| 5 | Nguyễn Danh Gia Mình | Tài liệu cũ và phần thông tin thiếu | Kiến thức được đọc/tổng hợp đủ để xử lý task | 10 phút/lần | Đo riêng để biết đây là hậu quả của retrieval kém hay bottleneck đọc hiểu độc lập. |
+| 6 | Nguyễn Danh Gia Mình | Kiến thức vừa tổng hợp | Task được xử lý | 3 phút/lần | Chưa lưu lại theo cấu trúc thống nhất nên workflow có thể lặp lại. |
 
 **Bottleneck chính (2-3 câu):**
 
 ```text
-
+Bottleneck chính nằm ở bước 3: tìm thủ công tài liệu trên note, file, Discord, Teams và
+email mất khoảng 20 phút nhưng kết quả có thể vẫn rời rạc hoặc thiếu ngữ cảnh. Nguyên
+nhân giả thuyết là chưa có một kho tập trung với metadata, tag và index thống nhất; bước
+đọc lại 10 phút được đo riêng, không gộp thành bottleneck thứ hai trước khi có baseline thật.
 ```
 
 ### 5.2. Future workflow bản nhóm
@@ -177,35 +188,46 @@ Dán workflow hoặc link file: `02-group-problem-statement-workflow.png/pdf/md`
 Phải nhìn ra 5 thứ: bước nào máy (Rule), bước nào AI, bước nào người, boundary ở đâu, fallback khi AI sai.
 
 ```text
-[1 ...: __' - máy] → [2 AI ...: __'] → [3 ... review: __' - boundary] → [4 ... gửi]
+FUTURE STATE — 4 bước, mục tiêu 7 phút/lần
 
-Fallback: ...
+[1. Nhập query kỹ thuật: 1' - Nguyễn Danh Gia Mình]
+→ [2. Truy vấn RAG, tổng hợp câu trả lời + citation: 1' - AI/Workflow]
+→ [3. Mở nguồn, kiểm tra độ chính xác và độ mới: 4' - Nguyễn Danh Gia Mình]
+   <-- human boundary
+→ [4. Áp dụng kiến thức vào task: 1' - Nguyễn Danh Gia Mình]
+
+Ingestion trước đó: người dùng chọn tài liệu → máy trích text → AI đề xuất summary/tag
+→ người dùng duyệt → hệ thống index vào knowledge base.
+
+Fallback: Nếu tài liệu chưa được index, RAG không tìm thấy hoặc citation không mở được,
+hệ thống báo “không đủ nguồn”; người dùng quay về tra cứu thủ công và chỉ bổ sung tài
+liệu vào knowledge base sau khi kiểm tra.
 ```
 
 **Before/after impact:**
 
 | Metric | Trước | Sau kỳ vọng | Cách đo |
 |---|---:|---:|---|
-| Tổng thời gian | | | |
-| Số bước | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Risk mới | | | |
+| Tổng thời gian | 42 phút/lần (ước tính) | 7 phút/lần; dưới 10 phút ở ≥ 80% lượt pilot | Bấm giờ từ lúc phát sinh nhu cầu đến khi tìm được nguồn đủ dùng và áp dụng vào task; lấy 5–10 lượt trước/sau. |
+| Số bước | 6 bước | 4 bước trong query workflow | Đếm các bước có input/output riêng; theo dõi ingestion như workflow chuẩn bị độc lập. |
+| Số bước thủ công | 6/6 bước | 3/4 bước có người thao tác; chỉ bước RAG là tự động | Đếm bước actor phải trực tiếp thực hiện; không ghi 2/4 vì nhập query, review và áp dụng đều cần người. |
+| Bottleneck chính | Tìm rải rác nhiều kênh: khoảng 20 phút | Review nguồn: mục tiêu 4 phút, là human boundary cần giữ | Ghi thời gian từng bước trong nhật ký tra cứu trước/sau. |
+| Rủi ro | Tìm thiếu, dùng tài liệu cũ hoặc thiếu ngữ cảnh | RAG thiếu nguồn, citation lỗi, tóm tắt sai hoặc dùng tài liệu outdated | Đếm số câu trả lời phải bỏ/tra lại; yêu cầu ≥ 90% câu trả lời có citation mở được. |
 
 ### 5.3. Problem Statement v0 (mỗi field 2-3 câu)
 
 | Field | Nội dung |
 |---|---|
-| **Actor** | |
-| **Workflow** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** | |
-| **Boundary** | |
+| **Actor** | Nguyễn Danh Gia Mình là actor chính trong pilot: người trực tiếp thu thập và tái sử dụng tài liệu kỹ thuật cho học tập, nghiên cứu và xử lý task. Chưa khái quát sang mọi sinh viên hoặc nhân sự kỹ thuật trước khi có validation với các actor khác. |
+| **Workflow** | Khi phát sinh nhu cầu, actor nhớ nguồn, tìm thủ công trên note/file/Discord/Teams/email, đối chiếu phần rời rạc, đọc lại phần thiếu rồi áp dụng vào task. Quy trình hiện có 6 bước, ước tính 42 phút/lần và lặp 2–3 lần/tuần; các số này cần được xác nhận bằng 5–10 lượt bấm giờ thật. |
+| **Bottleneck** | Bước tìm kiếm trên nhiều nguồn không có taxonomy, metadata, tag và index chung mất khoảng 20 phút/lần là bottleneck giả thuyết. Bước đọc lại 10 phút được đo riêng để xác định nó là hậu quả của retrieval kém hay một vấn đề đọc hiểu độc lập. |
+| **Impact** | Mỗi lượt tra cứu hiện được ước tính mất 42 phút và có thể xảy ra 2–3 lần/tuần, làm chậm task. Ngoài thời gian, actor có nguy cơ chỉ tìm được thông tin thiếu ngữ cảnh hoặc đã cũ và áp dụng chưa đầy đủ. |
+| **Success Metric** | Giảm tổng thời gian xuống 7 phút/lần và dưới 10 phút ở ít nhất 80% lượt pilot, đo trên 5–10 lượt trước/sau. Ít nhất 90% câu trả lời RAG phải có citation mở được; theo dõi riêng số câu trả lời sai/thiếu nguồn phải quay về tra cứu thủ công. |
+| **Boundary** | Workflow chỉ index tài liệu do người dùng chủ động chọn và được phép sử dụng; không tự đọc toàn bộ Discord, Teams hoặc email. AI chỉ đề xuất summary/tag và trả lời kèm citation; Nguyễn Danh Gia Mình phải duyệt metadata khi ingestion, mở nguồn kiểm tra độ chính xác/độ mới và quyết định cách áp dụng. Nếu thiếu nguồn hoặc citation lỗi, workflow quay về tra cứu thủ công. |
 
 **Câu hỏi AI phản biện v0 (nếu có):**
-- Field nào mơ hồ:
-- Tôi sửa gì:
+- Field nào mơ hồ: Baseline 42 phút và tần suất 2–3 lần/tuần vẫn là ước tính; chưa chứng minh process fix bằng Notion/Markdown và tagging thủ công là không đủ; “tài liệu kỹ thuật” còn gồm nhiều loại và mức nhạy cảm khác nhau.
+- Tôi sửa gì: Ghi rõ actor/pilot, tách retrieval khỏi đọc hiểu, định nghĩa cách đo 5–10 lượt và thêm boundary về nguồn được phép/citation/human review. Nhóm sẽ pilot template thủ công trước và chỉ quyết định Go với RAG nếu validation thật cho thấy bottleneck vẫn còn.
 
 ---
 
