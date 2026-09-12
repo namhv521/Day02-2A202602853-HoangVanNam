@@ -6,43 +6,47 @@
 
 | STT | Họ và tên | Mã học viên | Vai trò trong nhóm (VD: facilitator, workflow, research, writer) |
 |-----|-----------|-------------|---------------------------------------------------------------|
-| 1   |           |             |                                                               |
-| 2   |           |             |                                                               |
-| 3   |           |             |                                                               |
-| 4   |           |             |                                                               |
+| 1 | Nguyễn Hải Hoàng | 2A202602489 | Chưa phân công |
+| 2 | Phan Danh Đạt | 2A202602627 | Chưa phân công |
+| 3 | Lê Tuấn Đạt | 02623 | Chưa phân công |
+| 4 | Chưa cung cấp họ tên | 2A202602441 | Chưa phân công |
+| 5 | Hoàng Văn Nam | 2A202602853 | Chưa phân công |
 
 **Candidate problem nhóm chọn (1 câu):**
 
 
 ---
 
-## Phase 3 — Group Convergence: từ 9-12 candidates về 1
+## Phase 3 — Group Convergence: từ 15 candidates về 1
 
 ### 3.1. Trình bày top 3 mỗi người (mỗi candidate 1-2 phút)
 
 | # | Người đưa ra | Candidate problem | Người gặp vấn đề | Điểm nghẽn | Cảm nhận nhanh của nhóm |
 |---|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 1 | Nguyễn Hải Hoàng | Tổng hợp báo cáo tuần cho GVHD phải nhớ lại từ đầu, không có bản nháp tích lũy sẵn | Nguyễn Hải Hoàng — người tự tổng hợp và gửi báo cáo tuần | Nhớ lại và biến ghi chú rời rạc thành báo cáo mạch lạc mất khoảng 90 phút/tuần | Impact thời gian và workflow rõ; cần kiểm chứng khả năng duy trì ghi chú hằng ngày vì đây là dependency của input. |
+| 2 | Nguyễn Hải Hoàng | Yêu cầu bài tập của giáo viên nằm rải rác trong nhiều đoạn chat Zalo, phải tự lọc thành việc cần làm | Nguyễn Hải Hoàng; có thể cả người học nhận yêu cầu qua Zalo | Đọc và trích yêu cầu từ tin nhắn không cấu trúc, lặp khoảng 3–4 lần/buổi × 5 buổi/tuần | Tần suất cao và bước nghẽn gọn; cần lấy mẫu tin nhắn để kiểm tra mức biến thiên format, quyền truy cập và riêng tư. |
+| 3 | Nguyễn Hải Hoàng | Soạn bài nâng cao riêng cho hai học sinh khác khối 4 và 6 sau khi hoàn thành bài tập trên lớp | Nguyễn Hải Hoàng; hai học sinh lớp 4 và lớp 6 | Nghĩ dạng bài đúng chương trình và đúng độ khó cho từng học sinh | Impact dạy học rõ; AI có thể hỗ trợ sinh nội dung nhưng cần teacher review và tiêu chí đo độ khó/chất lượng. |
+| 4 | Phan Danh Đạt | Lịch học tuần đầu chương trình AI Thực chiến khóa 4 thay đổi sát giờ so với thông báo các khóa trước, có lớp tối muộn và cuối tuần | Học viên khóa 4 đã sắp xếp lịch cá nhân/công việc; BTC là dependency thông báo lịch | Thay đổi sát giờ sau khai giảng khiến học viên phải sắp xếp lại lịch | Pain có tín hiệu thật nhưng scope chưa rõ: thay đổi một tuần hay kéo dài; cần xác nhận lịch chính thức và số người bị ảnh hưởng. |
+| 5 | Phan Danh Đạt | Khối lượng tài liệu nhiều nhưng thời gian đọc trên lớp ít, khó nắm yêu cầu trước khi làm lab | Học viên khóa 4, đặc biệt học viên non-tech | Đọc hiểu thuật ngữ, lọc ý chính và chuyển tài liệu thành yêu cầu thực hiện lab | Actor cần thu hẹp và cần baseline; candidate có thể liên quan onboarding/tóm tắt nhưng chưa rõ bước nào tốn thời gian nhất. |
+| 6 | Phan Danh Đạt | Nghẽn ý tưởng khi scan problem thật cho Phase 1 | Phan Danh Đạt trong thời gian làm lab | Nhớ lại trải nghiệm đủ chi tiết để mô tả actor, workflow, bottleneck và evidence | Pain hiện tại và cụ thể, nhưng có thể là bài tập một lần; impact dài hạn và tính lặp lại còn yếu. |
+| 7 | Lê Tuấn Đạt | Đọc paper để lấy phần liên quan | Lê Tuấn Đạt/người đang làm nghiên cứu | Dò tìm đoạn liên quan trong paper rồi đọc hiểu để sử dụng | Tốn thời gian và workflow rõ; cần tách thời gian tìm đoạn khỏi thời gian đọc hiểu để xác định đúng bottleneck. |
+| 8 | Lê Tuấn Đạt | Gom kết quả train vào bảng so sánh | Lê Tuấn Đạt/người chạy thí nghiệm mô hình | Chép thủ công metric từ nhiều lần train vào bảng, có nguy cơ nhầm số | Evidence và metric trước/sau dễ đo; có khả năng logging convention hoặc script đã đủ, chưa cần AI. |
+| 9 | Lê Tuấn Đạt | Tìm lại câu trả lời cũ trong chat nhóm | Thành viên nhóm cần tra cứu quyết định/câu trả lời cũ | Search từ khóa rồi đọc nhiều đoạn chat để tìm đúng ngữ cảnh | Nhiều người có thể cùng đau; cần kiểm tra data access, quyền riêng tư và tần suất tìm thực tế. |
+| 10 | Thành viên mã 2A202602441 | Sắp xếp lịch họp và phòng họp cho cross-team meeting | Người điều phối cross-team meeting; các thành viên tham dự | Tìm giao lịch, phòng trống và xử lý vòng đề xuất lại, mất khoảng 15–20 phút/lần | Actor/workflow/impact tương đối rõ; cần biết có calendar/room API thật hay chỉ có thể giả lập. |
+| 11 | Thành viên mã 2A202602441 | Tài liệu kỹ thuật thu thập từ nhiều nguồn nhưng không được hệ thống hóa | Người thu thập và sử dụng tài liệu kỹ thuật | Phân loại, gắn ngữ cảnh và tìm lại tài liệu từ nhiều nguồn, xảy ra khoảng 2–3 lần/tuần | Có tần suất nhưng workflow còn rộng; cần thu hẹp loại tài liệu, nguồn, output và tình huống sử dụng. |
+| 12 | Thành viên mã 2A202602441 | Viết meeting notes sau cross-team meeting | Người phụ trách ghi biên bản; thành viên cần action items/decisions | Biến ghi chú hoặc nội dung cuộc họp thành notes có cấu trúc, mất khoảng 20–30 phút/buổi | Workflow và metric rõ; feasibility phụ thuộc việc có transcript thật hay chỉ có ghi chú tay. |
+| 13 | Hoàng Văn Nam | Báo cáo và đồng bộ tiến độ trên GitHub, Drive, DOCX | Hoàng Văn Nam — sinh viên năm 4 vừa đi làm vừa làm khóa luận; GVHD là người review | Nhập/định dạng lại phần nội dung thực sự bị trùng giữa các kênh | Lặp hằng tuần nhưng chưa chứng minh ba nơi đều bắt buộc hoặc chứa cùng nội dung; process fix có thể giải quyết phần lớn. |
+| 14 | Hoàng Văn Nam | Chuyển feedback sau review thành task có thể thực hiện và kiểm tra | Hoàng Văn Nam trong review 1:1 hằng tuần; GVHD xác nhận cách hiểu | Chuyển feedback thành task có vị trí cần sửa và acceptance criteria rõ | Tác động trực tiếp tiến độ khóa luận; cần log 3–5 buổi để kiểm chứng bottleneck, ưu tiên template/process fix trước AI. |
+| 15 | Hoàng Văn Nam | Xếp lịch review hằng tuần với GVHD | Hoàng Văn Nam và GVHD | Lọc availability theo lịch làm/lịch dạy, rule online/offline và buffer rồi xác nhận/reschedule | Workflow ngắn, đo được; fixed weekly slot + mặc định online có thể làm problem biến mất mà không cần build. |
 
-### 3.2. Gom trùng / cluster (gom 9-12 ý thành 3-4 cụm)
+### 3.2. Gom trùng / cluster (gom 15 ý thành 4 cụm)
 
 | Cluster | Candidates included | Pattern chung | Ghi chú |
 |---|---|---|---|
-| A | | | |
-| B | | | |
-| C | | | |
-| D (nếu có) | | | |
+| A — Báo cáo, ghi chú và chuyển thông tin thành đầu việc | #1 Báo cáo tuần cho GVHD; #12 Meeting notes; #13 Đồng bộ tiến độ đa kênh; #14 Feedback review → task | Biến dữ liệu/ghi chú/feedback rời rạc thành artifact có cấu trúc để người khác review hoặc để tiếp tục thực hiện | #1 và #12 gần nhau ở bước tổng hợp narrative; #14 tập trung acceptance criteria; #13 cần kiểm tra duplication có thật. Nhiều bài có thể bắt đầu bằng template/process fix. |
+| B — Tìm kiếm, đọc hiểu và hệ thống hóa thông tin | #2 Lọc yêu cầu từ chat Zalo; #5 Đọc tài liệu để làm lab; #7 Đọc paper lấy phần liên quan; #9 Tìm câu trả lời cũ trong chat; #11 Hệ thống hóa tài liệu kỹ thuật | Tìm đúng thông tin trong nguồn dài/rời rạc, hiểu ngữ cảnh rồi chuyển thành nội dung có thể sử dụng | Cụm lớn nhưng khác nguồn và actor; cần tránh gộp thành “search mọi thứ”. #2/#9 có rủi ro riêng tư, #7 có thể tách retrieval và comprehension, #11 còn rộng. |
+| C — Lịch học, lịch họp và coordination | #4 Lịch khóa học thay đổi sát giờ; #10 Xếp lịch/phòng cross-team meeting; #15 Xếp lịch review với GVHD | Phối hợp availability, constraint, thông báo và reschedule giữa nhiều bên | #10 và #15 gần nhau về scheduling; #4 thiên về change communication hơn là tìm slot. Shared calendar/rule có thể đủ; cần baseline và quyền tích hợp thật. |
+| D — Dạy học, thí nghiệm và phát triển ý tưởng | #3 Soạn bài nâng cao cho học sinh lớp 4/6; #6 Nghẽn ý tưởng scan problem; #8 Gom kết quả train | Tạo hoặc tổ chức đầu ra chuyên môn từ yêu cầu/dữ liệu đầu vào | Đây là cụm tạm có độ liên kết thấp. #3 cần kiểm soát chất lượng nội dung, #6 có tính một lần, #8 nhiều khả năng là logging/script; nên đánh giá riêng khi shortlist. |
 
 ### 3.3. Shortlist (giữ 2-3 bài trả lời được 7 câu hỏi worksheet)
 
